@@ -85,9 +85,6 @@ Configure miss: GRPCPP
 Configure miss: grpc_cpp_plugin
 Configure miss: javac
 Configure miss: jar
-Configure miss: lvm2app.h usability
-Configure miss: lvm2app.h presence
-Configure miss: lvm2app.h
 Configure miss: libmemcached/memcached.h usability
 Configure miss: libmemcached/memcached.h presence
 Configure miss: libmemcached/memcached.h
@@ -123,9 +120,6 @@ Configure miss: jevents.h
 Configure miss: amqp.h usability
 Configure miss: amqp.h presence
 Configure miss: amqp.h
-Configure miss: librdkafka/rdkafka.h usability
-Configure miss: librdkafka/rdkafka.h presence
-Configure miss: librdkafka/rdkafka.h
 Configure miss: routeros_api.h usability
 Configure miss: routeros_api.h presence
 Configure miss: routeros_api.h
@@ -140,15 +134,6 @@ Configure miss: tcrdb.h
 Configure miss: xenctrl.h usability
 Configure miss: xenctrl.h presence
 Configure miss: xenctrl.h
-Configure miss: yajl/yajl_parse.h usability
-Configure miss: yajl/yajl_parse.h presence
-Configure miss: yajl/yajl_parse.h
-Configure miss: yajl/yajl_tree.h usability
-Configure miss: yajl/yajl_tree.h presence
-Configure miss: yajl/yajl_tree.h
-Configure miss: yajl/yajl_version.h usability
-Configure miss: yajl/yajl_version.h presence
-Configure miss: yajl/yajl_version.h
 Configure miss: MicAccessApi.h usability
 Configure miss: MicAccessApi.h presence
 Configure miss: MicAccessApi.h

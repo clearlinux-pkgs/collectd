@@ -4,7 +4,7 @@
 #
 Name     : collectd
 Version  : 5.8.1
-Release  : 1
+Release  : 2
 URL      : https://storage.googleapis.com/collectd-tarballs/collectd-5.8.1.tar.bz2
 Source0  : https://storage.googleapis.com/collectd-tarballs/collectd-5.8.1.tar.bz2
 Summary  : Daemon which collects system performance statistics periodically
@@ -14,6 +14,7 @@ Requires: collectd-bin = %{version}-%{release}
 Requires: collectd-data = %{version}-%{release}
 Requires: collectd-lib = %{version}-%{release}
 Requires: collectd-man = %{version}-%{release}
+BuildRequires : LVM2-dev
 BuildRequires : bison
 BuildRequires : buildreq-cpan
 BuildRequires : curl-dev
@@ -23,6 +24,7 @@ BuildRequires : libgcrypt-dev
 BuildRequires : libmnl-dev
 BuildRequires : libnotify-dev
 BuildRequires : libpcap-dev
+BuildRequires : librdkafka-dev
 BuildRequires : openldap-dev
 BuildRequires : perl(YAML::Any)
 BuildRequires : pkgconfig(libmicrohttpd)
@@ -33,6 +35,7 @@ BuildRequires : pkgconfig(protobuf)
 BuildRequires : python3-dev
 BuildRequires : systemd-dev
 BuildRequires : valgrind
+BuildRequires : yajl-dev
 
 %description
 collectd is a small daemon which collects system information periodically and
@@ -98,7 +101,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571086388
+export SOURCE_DATE_EPOCH=1571087036
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -119,7 +122,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1571086388
+export SOURCE_DATE_EPOCH=1571087036
 rm -rf %{buildroot}
 %make_install
 
@@ -161,6 +164,7 @@ rm -rf %{buildroot}
 /usr/lib64/collectd/aggregation.so
 /usr/lib64/collectd/apcups.so
 /usr/lib64/collectd/battery.so
+/usr/lib64/collectd/ceph.so
 /usr/lib64/collectd/cgroups.so
 /usr/lib64/collectd/chrony.so
 /usr/lib64/collectd/conntrack.so
@@ -187,8 +191,10 @@ rm -rf %{buildroot}
 /usr/lib64/collectd/ipvs.so
 /usr/lib64/collectd/irq.so
 /usr/lib64/collectd/load.so
+/usr/lib64/collectd/log_logstash.so
 /usr/lib64/collectd/logfile.so
 /usr/lib64/collectd/lua.so
+/usr/lib64/collectd/lvm.so
 /usr/lib64/collectd/madwifi.so
 /usr/lib64/collectd/match_empty_counter.so
 /usr/lib64/collectd/match_hashed.so
@@ -211,6 +217,8 @@ rm -rf %{buildroot}
 /usr/lib64/collectd/olsrd.so
 /usr/lib64/collectd/openldap.so
 /usr/lib64/collectd/openvpn.so
+/usr/lib64/collectd/ovs_events.so
+/usr/lib64/collectd/ovs_stats.so
 /usr/lib64/collectd/perl.so
 /usr/lib64/collectd/pinba.so
 /usr/lib64/collectd/powerdns.so
@@ -246,6 +254,7 @@ rm -rf %{buildroot}
 /usr/lib64/collectd/vserver.so
 /usr/lib64/collectd/wireless.so
 /usr/lib64/collectd/write_graphite.so
+/usr/lib64/collectd/write_kafka.so
 /usr/lib64/collectd/write_log.so
 /usr/lib64/collectd/write_prometheus.so
 /usr/lib64/collectd/write_sensu.so
