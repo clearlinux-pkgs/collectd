@@ -1,0 +1,14 @@
+5.8.1
+bison
+curl-dev
+flex
+libcap-dev
+libgcrypt-dev
+libmnl-dev
+libnotify-dev
+libpcap-dev
+openldap-dev
+perl(YAML::Any)
+python3-dev
+systemd-dev
+valgrind
