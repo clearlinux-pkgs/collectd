@@ -4,16 +4,17 @@
 #
 Name     : collectd
 Version  : 5.8.1
-Release  : 4
+Release  : 5
 URL      : https://storage.googleapis.com/collectd-tarballs/collectd-5.8.1.tar.bz2
 Source0  : https://storage.googleapis.com/collectd-tarballs/collectd-5.8.1.tar.bz2
-Summary  : Daemon which collects system performance statistics periodically
+Summary  : Statistics collection daemon for filling RRD files.
 Group    : Development/Tools
 License  : GPL-2.0
 Requires: collectd-bin = %{version}-%{release}
 Requires: collectd-data = %{version}-%{release}
 Requires: collectd-lib = %{version}-%{release}
 Requires: collectd-man = %{version}-%{release}
+Requires: collectd-perl = %{version}-%{release}
 BuildRequires : LVM2-dev
 BuildRequires : bison
 BuildRequires : buildreq-cpan
@@ -70,7 +71,6 @@ Requires: collectd-bin = %{version}-%{release}
 Requires: collectd-data = %{version}-%{release}
 Provides: collectd-devel = %{version}-%{release}
 Requires: collectd = %{version}-%{release}
-Requires: collectd = %{version}-%{release}
 
 %description dev
 dev components for the collectd package.
@@ -93,16 +93,25 @@ Group: Default
 man components for the collectd package.
 
 
+%package perl
+Summary: perl components for the collectd package.
+Group: Default
+Requires: collectd = %{version}-%{release}
+
+%description perl
+perl components for the collectd package.
+
+
 %prep
 %setup -q -n collectd-5.8.1
+cd %{_builddir}/collectd-5.8.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571087036
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1574728435
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -122,16 +131,12 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1571087036
+export SOURCE_DATE_EPOCH=1574728435
 rm -rf %{buildroot}
 %make_install
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.28.2/Collectd.pm
-/usr/lib/perl5/site_perl/5.28.2/Collectd/Plugins/OpenVZ.pm
-/usr/lib/perl5/site_perl/5.28.2/Collectd/Unixsock.pm
-/usr/lib/perl5/site_perl/5.28.2/x86_64-linux-thread-multi/auto/Collectd/.packlist
 
 %files bin
 %defattr(-,root,root,-)
@@ -224,7 +229,6 @@ rm -rf %{buildroot}
 /usr/lib64/collectd/powerdns.so
 /usr/lib64/collectd/processes.so
 /usr/lib64/collectd/protocols.so
-/usr/lib64/collectd/python.so
 /usr/lib64/collectd/rrdcached.so
 /usr/lib64/collectd/rrdtool.so
 /usr/lib64/collectd/serial.so
@@ -282,3 +286,10 @@ rm -rf %{buildroot}
 /usr/share/man/man5/collectd-unixsock.5
 /usr/share/man/man5/collectd.conf.5
 /usr/share/man/man5/types.db.5
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/site_perl/5.28.2/Collectd.pm
+/usr/lib/perl5/site_perl/5.28.2/Collectd/Plugins/OpenVZ.pm
+/usr/lib/perl5/site_perl/5.28.2/Collectd/Unixsock.pm
+/usr/lib/perl5/site_perl/5.28.2/x86_64-linux-thread-multi/auto/Collectd/.packlist

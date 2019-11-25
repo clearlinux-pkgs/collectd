@@ -117,6 +117,7 @@ Configure miss: pqos.h
 Configure miss: jevents.h usability
 Configure miss: jevents.h presence
 Configure miss: jevents.h
+Configure miss: libpython
 Configure miss: amqp.h usability
 Configure miss: amqp.h presence
 Configure miss: amqp.h

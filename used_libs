@@ -15,7 +15,6 @@ libpcap.so.1
 libperl.so
 libprotobuf-c.so.1
 libpthread.so.0
-libpython3.7m.so.1.0
 librdkafka.so.1
 librrd.so.8
 libudev.so.1
