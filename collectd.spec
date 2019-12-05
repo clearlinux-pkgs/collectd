@@ -4,7 +4,7 @@
 #
 Name     : collectd
 Version  : 5.8.1
-Release  : 3
+Release  : 4
 URL      : https://storage.googleapis.com/collectd-tarballs/collectd-5.8.1.tar.bz2
 Source0  : https://storage.googleapis.com/collectd-tarballs/collectd-5.8.1.tar.bz2
 Summary  : Daemon which collects system performance statistics periodically
