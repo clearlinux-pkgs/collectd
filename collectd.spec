@@ -4,15 +4,16 @@
 #
 Name     : collectd
 Version  : 5.8.1
-Release  : 5
+Release  : 6
 URL      : https://storage.googleapis.com/collectd-tarballs/collectd-5.8.1.tar.bz2
 Source0  : https://storage.googleapis.com/collectd-tarballs/collectd-5.8.1.tar.bz2
 Summary  : Statistics collection daemon for filling RRD files.
 Group    : Development/Tools
-License  : GPL-2.0
+License  : GPL-2.0 MIT
 Requires: collectd-bin = %{version}-%{release}
 Requires: collectd-data = %{version}-%{release}
 Requires: collectd-lib = %{version}-%{release}
+Requires: collectd-license = %{version}-%{release}
 Requires: collectd-man = %{version}-%{release}
 Requires: collectd-perl = %{version}-%{release}
 BuildRequires : LVM2-dev
@@ -50,6 +51,7 @@ every 10 seconds.
 Summary: bin components for the collectd package.
 Group: Binaries
 Requires: collectd-data = %{version}-%{release}
+Requires: collectd-license = %{version}-%{release}
 
 %description bin
 bin components for the collectd package.
@@ -80,9 +82,18 @@ dev components for the collectd package.
 Summary: lib components for the collectd package.
 Group: Libraries
 Requires: collectd-data = %{version}-%{release}
+Requires: collectd-license = %{version}-%{release}
 
 %description lib
 lib components for the collectd package.
+
+
+%package license
+Summary: license components for the collectd package.
+Group: Default
+
+%description license
+license components for the collectd package.
 
 
 %package man
@@ -111,7 +122,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1574728435
+export SOURCE_DATE_EPOCH=1578617654
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -120,7 +131,7 @@ export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
 export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
 export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
-%configure --disable-static
+%configure --disable-static --with-perl-bindings="PREFIX=/usr INSTALLDIRS=vendor"
 make  %{?_smp_mflags}
 
 %check
@@ -131,8 +142,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1574728435
+export SOURCE_DATE_EPOCH=1578617654
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/collectd
+cp %{_builddir}/collectd-5.8.1/COPYING %{buildroot}/usr/share/package-licenses/collectd/93a4490e1756e10ae6f7a60183f1e1e895c22bcd
 %make_install
 
 %files
@@ -268,6 +281,10 @@ rm -rf %{buildroot}
 /usr/lib64/libcollectdclient.so.1
 /usr/lib64/libcollectdclient.so.1.1.0
 
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/collectd/93a4490e1756e10ae6f7a60183f1e1e895c22bcd
+
 %files man
 %defattr(0644,root,root,0755)
 /usr/share/man/man1/collectd-nagios.1
@@ -289,7 +306,7 @@ rm -rf %{buildroot}
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.28.2/Collectd.pm
-/usr/lib/perl5/site_perl/5.28.2/Collectd/Plugins/OpenVZ.pm
-/usr/lib/perl5/site_perl/5.28.2/Collectd/Unixsock.pm
-/usr/lib/perl5/site_perl/5.28.2/x86_64-linux-thread-multi/auto/Collectd/.packlist
+/usr/lib/perl5/vendor_perl/5.28.2/Collectd.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Collectd/Plugins/OpenVZ.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Collectd/Unixsock.pm
+/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/auto/Collectd/.packlist
