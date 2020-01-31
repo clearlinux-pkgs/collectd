@@ -4,7 +4,7 @@
 #
 Name     : collectd
 Version  : 5.8.1
-Release  : 7
+Release  : 8
 URL      : https://storage.googleapis.com/collectd-tarballs/collectd-5.8.1.tar.bz2
 Source0  : https://storage.googleapis.com/collectd-tarballs/collectd-5.8.1.tar.bz2
 Summary  : Statistics collection daemon for filling RRD files.
@@ -17,18 +17,25 @@ Requires: collectd-license = %{version}-%{release}
 Requires: collectd-man = %{version}-%{release}
 Requires: collectd-perl = %{version}-%{release}
 BuildRequires : LVM2-dev
+BuildRequires : automake
+BuildRequires : automake-dev
 BuildRequires : bison
 BuildRequires : buildreq-cpan
 BuildRequires : curl-dev
 BuildRequires : flex
+BuildRequires : gettext-bin
 BuildRequires : libcap-dev
 BuildRequires : libgcrypt-dev
 BuildRequires : libmnl-dev
 BuildRequires : libnotify-dev
 BuildRequires : libpcap-dev
 BuildRequires : librdkafka-dev
+BuildRequires : libtool
+BuildRequires : libtool-dev
+BuildRequires : m4
 BuildRequires : openldap-dev
 BuildRequires : perl(YAML::Any)
+BuildRequires : pkg-config-dev
 BuildRequires : pkgconfig(libmicrohttpd)
 BuildRequires : pkgconfig(libprotobuf-c)
 BuildRequires : pkgconfig(librrd)
@@ -38,6 +45,7 @@ BuildRequires : python3-dev
 BuildRequires : systemd-dev
 BuildRequires : valgrind
 BuildRequires : yajl-dev
+Patch1: 0001-Fix-linking-with-Python-3.8.patch
 
 %description
 collectd is a small daemon which collects system information periodically and
@@ -116,13 +124,14 @@ perl components for the collectd package.
 %prep
 %setup -q -n collectd-5.8.1
 cd %{_builddir}/collectd-5.8.1
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1578618742
+export SOURCE_DATE_EPOCH=1580501811
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -131,7 +140,7 @@ export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
 export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
 export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
-%configure --disable-static --with-perl-bindings="PREFIX=/usr INSTALLDIRS=vendor"
+%reconfigure --disable-static --with-perl-bindings="PREFIX=/usr INSTALLDIRS=vendor"
 make  %{?_smp_mflags}
 
 %check
@@ -142,7 +151,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1578618742
+export SOURCE_DATE_EPOCH=1580501811
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/collectd
 cp %{_builddir}/collectd-5.8.1/COPYING %{buildroot}/usr/share/package-licenses/collectd/93a4490e1756e10ae6f7a60183f1e1e895c22bcd

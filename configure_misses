@@ -68,7 +68,7 @@ Configure miss: curl_easy_init in -lcurl
 Configure miss: dbi/dbi.h usability
 Configure miss: dbi/dbi.h presence
 Configure miss: dbi/dbi.h
-Configure miss: DPDK
+Configure miss: libdpdk
 Configure miss: rte_config.h usability
 Configure miss: rte_config.h presence
 Configure miss: rte_config.h
@@ -81,14 +81,14 @@ Configure miss: gm_protocol.h
 Configure miss: gps.h usability
 Configure miss: gps.h presence
 Configure miss: gps.h
-Configure miss: GRPCPP
+Configure miss: grpc++
 Configure miss: grpc_cpp_plugin
 Configure miss: javac
 Configure miss: jar
 Configure miss: libmemcached/memcached.h usability
 Configure miss: libmemcached/memcached.h presence
 Configure miss: libmemcached/memcached.h
-Configure miss: LIBMONGOC
+Configure miss: libmongoc-1.0
 Configure miss: mosquitto.h usability
 Configure miss: mosquitto.h presence
 Configure miss: mosquitto.h
@@ -127,7 +127,7 @@ Configure miss: routeros_api.h
 Configure miss: sensors/sensors.h usability
 Configure miss: sensors/sensors.h presence
 Configure miss: sensors/sensors.h
-Configure miss: LIBSIGROK
+Configure miss: libsigrok < 0.4
 Configure miss: pkg-config for libstatgrab
 Configure miss: tcrdb.h usability
 Configure miss: tcrdb.h presence
@@ -142,4 +142,4 @@ Configure miss: libOpenIPMIpthread
 Configure miss: atasmart.h usability
 Configure miss: atasmart.h presence
 Configure miss: atasmart.h
-Configure miss: LIBRIEMANN_CLIENT
+Configure miss: riemann-client >= 1.6.0
