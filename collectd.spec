@@ -4,7 +4,7 @@
 #
 Name     : collectd
 Version  : 5.8.1
-Release  : 9
+Release  : 10
 URL      : https://storage.googleapis.com/collectd-tarballs/collectd-5.8.1.tar.bz2
 Source0  : https://storage.googleapis.com/collectd-tarballs/collectd-5.8.1.tar.bz2
 Summary  : Statistics collection daemon for filling RRD files.
@@ -131,14 +131,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1584400883
+export SOURCE_DATE_EPOCH=1591209860
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
 export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %reconfigure --disable-static --with-perl-bindings="PREFIX=/usr INSTALLDIRS=vendor"
 make  %{?_smp_mflags}
@@ -151,7 +151,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1584400883
+export SOURCE_DATE_EPOCH=1591209860
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/collectd
 cp %{_builddir}/collectd-5.8.1/COPYING %{buildroot}/usr/share/package-licenses/collectd/93a4490e1756e10ae6f7a60183f1e1e895c22bcd
@@ -315,7 +315,7 @@ cp %{_builddir}/collectd-5.8.1/COPYING %{buildroot}/usr/share/package-licenses/c
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.2/Collectd.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Collectd/Plugins/OpenVZ.pm
-/usr/lib/perl5/vendor_perl/5.30.2/Collectd/Unixsock.pm
-/usr/lib/perl5/vendor_perl/5.30.2/x86_64-linux-thread-multi/auto/Collectd/.packlist
+/usr/lib/perl5/vendor_perl/5.30.3/Collectd.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Collectd/Plugins/OpenVZ.pm
+/usr/lib/perl5/vendor_perl/5.30.3/Collectd/Unixsock.pm
+/usr/lib/perl5/vendor_perl/5.30.3/x86_64-linux-thread-multi/auto/Collectd/.packlist
