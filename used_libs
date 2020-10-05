@@ -4,9 +4,9 @@ libdl.so.2
 libgcc_s.so.1
 libgcrypt.so.20
 libgobject-2.0.so.0
+libjansson.so.4
 libldap-2.4.so.2
 liblua.so.5.3
-liblvm2app.so.2.2
 libm.so.6
 libmicrohttpd.so.12
 libmnl.so.0
@@ -15,6 +15,7 @@ libpcap.so.1
 libperl.so
 libprotobuf-c.so.1
 libpthread.so.0
+libpython3.8.so.1.0
 librdkafka.so.1
 librrd.so.8
 libudev.so.1

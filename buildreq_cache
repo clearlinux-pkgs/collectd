@@ -1,8 +1,8 @@
-5.8.1
-LVM2-dev
+5.12.0
 bison
 curl-dev
 flex
+jansson-dev
 libcap-dev
 libgcrypt-dev
 libmnl-dev
@@ -10,6 +10,7 @@ libnotify-dev
 libpcap-dev
 librdkafka-dev
 openldap-dev
+openssl-dev
 perl(YAML::Any)
 python3-dev
 systemd-dev

@@ -53,6 +53,9 @@ Configure miss: kstat_io_t.nwrites
 Configure miss: kstat_io_t.wtime
 Configure miss: pthread_setname_np
 Configure miss: pthread_set_name_np
+Configure miss: i2c/smbus.h usability
+Configure miss: i2c/smbus.h presence
+Configure miss: i2c/smbus.h
 Configure miss: whether i2c_smbus_read_i2c_block_data is declared
 Configure miss: kvm_getprocs in -lkvm
 Configure miss: kvm_getswapinfo in -lkvm
@@ -64,11 +67,14 @@ Configure miss: libaquaero5.h
 Configure miss: hiredis/hiredis.h usability
 Configure miss: hiredis/hiredis.h presence
 Configure miss: hiredis/hiredis.h
+Configure miss: redfish.h usability
+Configure miss: redfish.h presence
+Configure miss: redfish.h
 Configure miss: curl_easy_init in -lcurl
 Configure miss: dbi/dbi.h usability
 Configure miss: dbi/dbi.h presence
 Configure miss: dbi/dbi.h
-Configure miss: libdpdk
+Configure miss: DPDK
 Configure miss: rte_config.h usability
 Configure miss: rte_config.h presence
 Configure miss: rte_config.h
@@ -81,14 +87,14 @@ Configure miss: gm_protocol.h
 Configure miss: gps.h usability
 Configure miss: gps.h presence
 Configure miss: gps.h
-Configure miss: grpc++
+Configure miss: GRPCPP
 Configure miss: grpc_cpp_plugin
 Configure miss: javac
 Configure miss: jar
 Configure miss: libmemcached/memcached.h usability
 Configure miss: libmemcached/memcached.h presence
 Configure miss: libmemcached/memcached.h
-Configure miss: libmongoc-1.0
+Configure miss: LIBMONGOC
 Configure miss: mosquitto.h usability
 Configure miss: mosquitto.h presence
 Configure miss: mosquitto.h
@@ -108,6 +114,9 @@ Configure miss: owcapi.h usability
 Configure miss: owcapi.h presence
 Configure miss: owcapi.h
 Configure miss: broken Perl_load_module()
+Configure miss: pmw_api.h usability
+Configure miss: pmw_api.h presence
+Configure miss: pmw_api.h
 Configure miss: libpq-fe.h usability
 Configure miss: libpq-fe.h presence
 Configure miss: libpq-fe.h
@@ -117,7 +126,9 @@ Configure miss: pqos.h
 Configure miss: jevents.h usability
 Configure miss: jevents.h presence
 Configure miss: jevents.h
-Configure miss: libpython
+Configure miss: proton/proactor.h usability
+Configure miss: proton/proactor.h presence
+Configure miss: proton/proactor.h
 Configure miss: amqp.h usability
 Configure miss: amqp.h presence
 Configure miss: amqp.h
@@ -127,7 +138,7 @@ Configure miss: routeros_api.h
 Configure miss: sensors/sensors.h usability
 Configure miss: sensors/sensors.h presence
 Configure miss: sensors/sensors.h
-Configure miss: libsigrok < 0.4
+Configure miss: LIBSIGROK
 Configure miss: pkg-config for libstatgrab
 Configure miss: tcrdb.h usability
 Configure miss: tcrdb.h presence
@@ -142,4 +153,4 @@ Configure miss: libOpenIPMIpthread
 Configure miss: atasmart.h usability
 Configure miss: atasmart.h presence
 Configure miss: atasmart.h
-Configure miss: riemann-client >= 1.6.0
+Configure miss: LIBRIEMANN_CLIENT
