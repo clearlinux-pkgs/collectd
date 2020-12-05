@@ -70,7 +70,6 @@ Configure miss: hiredis/hiredis.h
 Configure miss: redfish.h usability
 Configure miss: redfish.h presence
 Configure miss: redfish.h
-Configure miss: curl_easy_init in -lcurl
 Configure miss: dbi/dbi.h usability
 Configure miss: dbi/dbi.h presence
 Configure miss: dbi/dbi.h

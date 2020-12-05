@@ -4,7 +4,7 @@
 #
 Name     : collectd
 Version  : 5.12.0
-Release  : 12
+Release  : 13
 URL      : https://storage.googleapis.com/collectd-tarballs/collectd-5.12.0.tar.bz2
 Source0  : https://storage.googleapis.com/collectd-tarballs/collectd-5.12.0.tar.bz2
 Summary  : barometer plugin for collectd
@@ -122,7 +122,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1601864374
+export SOURCE_DATE_EPOCH=1607132786
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -142,7 +142,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1601864374
+export SOURCE_DATE_EPOCH=1607132786
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/collectd
 cp %{_builddir}/collectd-5.12.0/COPYING %{buildroot}/usr/share/package-licenses/collectd/93a4490e1756e10ae6f7a60183f1e1e895c22bcd
@@ -180,6 +180,7 @@ cp %{_builddir}/collectd-5.12.0/COPYING %{buildroot}/usr/share/package-licenses/
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/collectd/aggregation.so
+/usr/lib64/collectd/apache.so
 /usr/lib64/collectd/apcups.so
 /usr/lib64/collectd/battery.so
 /usr/lib64/collectd/buddyinfo.so
@@ -195,6 +196,8 @@ cp %{_builddir}/collectd-5.12.0/COPYING %{buildroot}/usr/share/package-licenses/
 /usr/lib64/collectd/cpufreq.so
 /usr/lib64/collectd/cpusleep.so
 /usr/lib64/collectd/csv.so
+/usr/lib64/collectd/curl.so
+/usr/lib64/collectd/curl_json.so
 /usr/lib64/collectd/df.so
 /usr/lib64/collectd/disk.so
 /usr/lib64/collectd/dns.so
@@ -235,6 +238,7 @@ cp %{_builddir}/collectd-5.12.0/COPYING %{buildroot}/usr/share/package-licenses/
 /usr/lib64/collectd/netlink.so
 /usr/lib64/collectd/network.so
 /usr/lib64/collectd/nfs.so
+/usr/lib64/collectd/nginx.so
 /usr/lib64/collectd/notify_desktop.so
 /usr/lib64/collectd/notify_nagios.so
 /usr/lib64/collectd/ntpd.so
@@ -283,11 +287,13 @@ cp %{_builddir}/collectd-5.12.0/COPYING %{buildroot}/usr/share/package-licenses/
 /usr/lib64/collectd/vserver.so
 /usr/lib64/collectd/wireless.so
 /usr/lib64/collectd/write_graphite.so
+/usr/lib64/collectd/write_http.so
 /usr/lib64/collectd/write_influxdb_udp.so
 /usr/lib64/collectd/write_kafka.so
 /usr/lib64/collectd/write_log.so
 /usr/lib64/collectd/write_prometheus.so
 /usr/lib64/collectd/write_sensu.so
+/usr/lib64/collectd/write_stackdriver.so
 /usr/lib64/collectd/write_syslog.so
 /usr/lib64/collectd/write_tsdb.so
 /usr/lib64/collectd/zfs_arc.so
