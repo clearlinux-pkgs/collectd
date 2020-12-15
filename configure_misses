@@ -116,7 +116,6 @@ Configure miss: broken Perl_load_module()
 Configure miss: pmw_api.h usability
 Configure miss: pmw_api.h presence
 Configure miss: pmw_api.h
-Configure miss: libpq-fe.h usability
 Configure miss: libpq-fe.h presence
 Configure miss: libpq-fe.h
 Configure miss: pqos.h usability
