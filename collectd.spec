@@ -4,7 +4,7 @@
 #
 Name     : collectd
 Version  : 5.12.0
-Release  : 16
+Release  : 17
 URL      : https://storage.googleapis.com/collectd-tarballs/collectd-5.12.0.tar.bz2
 Source0  : https://storage.googleapis.com/collectd-tarballs/collectd-5.12.0.tar.bz2
 Summary  : barometer plugin for collectd
@@ -326,7 +326,7 @@ cp %{_builddir}/collectd-5.12.0/COPYING %{buildroot}/usr/share/package-licenses/
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.3/Collectd.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Collectd/Plugins/OpenVZ.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Collectd/Unixsock.pm
-/usr/lib/perl5/vendor_perl/5.30.3/x86_64-linux-thread-multi/auto/Collectd/.packlist
+/usr/lib/perl5/vendor_perl/5.32.1/Collectd.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Collectd/Plugins/OpenVZ.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Collectd/Unixsock.pm
+/usr/lib/perl5/vendor_perl/5.32.1/x86_64-linux-thread-multi/auto/Collectd/.packlist
