@@ -1,45 +1,121 @@
+Configure miss: DPDK
+Configure miss: GRPCPP
+Configure miss: LIBMONGOC
+Configure miss: LIBRIEMANN_CLIENT
+Configure miss: LIBSIGROK
+Configure miss: MicAccessApi.h
+Configure miss: MicAccessApi.h presence
+Configure miss: MicAccessApi.h usability
+Configure miss: amqp.h
+Configure miss: amqp.h presence
+Configure miss: amqp.h usability
+Configure miss: atasmart.h
+Configure miss: atasmart.h presence
+Configure miss: atasmart.h usability
+Configure miss: broken Perl_load_module()
+Configure miss: dbi/dbi.h
+Configure miss: dbi/dbi.h presence
+Configure miss: dbi/dbi.h usability
 Configure miss: fs_info.h
 Configure miss: fshelp.h
-Configure miss: kstat.h
-Configure miss: kvm.h
-Configure miss: mnttab.h
-Configure miss: pthread_np.h
-Configure miss: sys/fs_types.h
-Configure miss: sys/fstyp.h
-Configure miss: sys/isa_defs.h
-Configure miss: sys/mntent.h
-Configure miss: sys/mnttab.h
-Configure miss: sys/vfstab.h
-Configure miss: sys/vmmeter.h
-Configure miss: netinet/ip_var.h
-Configure miss: sys/dkstat.h usability
-Configure miss: sys/dkstat.h presence
-Configure miss: sys/dkstat.h
-Configure miss: vm/anon.h
-Configure miss: linux/config.h usability
-Configure miss: linux/config.h presence
-Configure miss: linux/config.h
-Configure miss: xfs/xqm.h
-Configure miss: net/pfvar.h
-Configure miss: whether strerror_r returns char *
-Configure miss: host_statistics
-Configure miss: processor_info
-Configure miss: sysctlbyname
-Configure miss: thread_info
-Configure miss: sysctl kern.cp_times
-Configure miss: sysctl kern.cp_time
-Configure miss: swapctl
 Configure miss: getfsstat
 Configure miss: getvfsstat
+Configure miss: gm_protocol.h
+Configure miss: gm_protocol.h presence
+Configure miss: gm_protocol.h usability
+Configure miss: gps.h
+Configure miss: gps.h presence
+Configure miss: gps.h usability
+Configure miss: grpc_cpp_plugin
+Configure miss: hiredis/hiredis.h
+Configure miss: hiredis/hiredis.h presence
+Configure miss: hiredis/hiredis.h usability
+Configure miss: host_statistics
+Configure miss: i2c/smbus.h
+Configure miss: i2c/smbus.h presence
+Configure miss: i2c/smbus.h usability
+Configure miss: jar
+Configure miss: javac
+Configure miss: jevents.h
+Configure miss: jevents.h presence
+Configure miss: jevents.h usability
+Configure miss: kstat.h
+Configure miss: kstat_io_t.nwrites
+Configure miss: kstat_io_t.nwritten
+Configure miss: kstat_io_t.writes
+Configure miss: kstat_io_t.wtime
+Configure miss: kvm.h
+Configure miss: kvm_getprocs in -lkvm
+Configure miss: kvm_getswapinfo in -lkvm
+Configure miss: kvm_nlist in -lkvm
+Configure miss: kvm_openfiles in -lkvm
+Configure miss: libOpenIPMIpthread
+Configure miss: libaquaero5.h
+Configure miss: libaquaero5.h presence
+Configure miss: libaquaero5.h usability
+Configure miss: libesmtp.h
+Configure miss: libesmtp.h presence
+Configure miss: libesmtp.h usability
+Configure miss: libmemcached/memcached.h
+Configure miss: libmemcached/memcached.h presence
+Configure miss: libmemcached/memcached.h usability
+Configure miss: libmnl.h
+Configure miss: libpq-fe.h
+Configure miss: libpq-fe.h presence
+Configure miss: libpq-fe.h usability
+Configure miss: linux/config.h
+Configure miss: linux/config.h presence
+Configure miss: linux/config.h usability
 Configure miss: listmntent
-Configure miss: whether getmntent takes two arguments
-Configure miss: whether htonll is defined
+Configure miss: mnttab.h
+Configure miss: mosquitto.h
+Configure miss: mosquitto.h presence
+Configure miss: mosquitto.h usability
+Configure miss: net-snmp/agent/net-snmp-agent-includes.h
+Configure miss: net-snmp/net-snmp-config.h
+Configure miss: net-snmp/net-snmp-config.h presence
+Configure miss: net-snmp/net-snmp-config.h usability
+Configure miss: net-snmp/net-snmp-includes.h
+Configure miss: net/pfvar.h
+Configure miss: netapp_api.h
+Configure miss: netapp_api.h presence
+Configure miss: netapp_api.h usability
+Configure miss: netinet/ip_var.h
+Configure miss: oping.h
+Configure miss: oping.h presence
+Configure miss: oping.h usability
+Configure miss: owcapi.h
+Configure miss: owcapi.h presence
+Configure miss: owcapi.h usability
+Configure miss: pkg-config for libstatgrab
+Configure miss: pmw_api.h
+Configure miss: pmw_api.h presence
+Configure miss: pmw_api.h usability
+Configure miss: pqos.h
+Configure miss: pqos.h presence
+Configure miss: pqos.h usability
+Configure miss: processor_info
+Configure miss: proton/proactor.h
+Configure miss: proton/proactor.h presence
+Configure miss: proton/proactor.h usability
+Configure miss: pthread_np.h
+Configure miss: pthread_set_name_np
+Configure miss: pthread_setname_np
+Configure miss: redfish.h
+Configure miss: redfish.h presence
+Configure miss: redfish.h usability
+Configure miss: routeros_api.h
+Configure miss: routeros_api.h presence
+Configure miss: routeros_api.h usability
+Configure miss: rte_config.h
+Configure miss: rte_config.h presence
+Configure miss: rte_config.h usability
+Configure miss: sensors/sensors.h
+Configure miss: sensors/sensors.h presence
+Configure miss: sensors/sensors.h usability
 Configure miss: struct if_data.ifi_ibytes
-Configure miss: struct if_data.ifi_opackets
 Configure miss: struct if_data.ifi_ierrors
-Configure miss: struct net_device_stats.rx_bytes
-Configure miss: struct net_device_stats.tx_packets
-Configure miss: struct net_device_stats.rx_errors
+Configure miss: struct if_data.ifi_opackets
 Configure miss: struct kinfo_proc.ki_pid
 Configure miss: struct kinfo_proc.ki_rssize
 Configure miss: struct kinfo_proc.ki_rusage
@@ -47,109 +123,35 @@ Configure miss: struct kinfo_proc.p_pid
 Configure miss: struct kinfo_proc.p_vm_rssize
 Configure miss: struct kinfo_proc2.p_pid
 Configure miss: struct kinfo_proc2.p_uru_maxrss
-Configure miss: kstat_io_t.nwritten
-Configure miss: kstat_io_t.writes
-Configure miss: kstat_io_t.nwrites
-Configure miss: kstat_io_t.wtime
-Configure miss: pthread_setname_np
-Configure miss: pthread_set_name_np
-Configure miss: i2c/smbus.h usability
-Configure miss: i2c/smbus.h presence
-Configure miss: i2c/smbus.h
-Configure miss: whether i2c_smbus_read_i2c_block_data is declared
-Configure miss: kvm_getprocs in -lkvm
-Configure miss: kvm_getswapinfo in -lkvm
-Configure miss: kvm_nlist in -lkvm
-Configure miss: kvm_openfiles in -lkvm
-Configure miss: libaquaero5.h usability
-Configure miss: libaquaero5.h presence
-Configure miss: libaquaero5.h
-Configure miss: hiredis/hiredis.h usability
-Configure miss: hiredis/hiredis.h presence
-Configure miss: hiredis/hiredis.h
-Configure miss: redfish.h usability
-Configure miss: redfish.h presence
-Configure miss: redfish.h
-Configure miss: dbi/dbi.h usability
-Configure miss: dbi/dbi.h presence
-Configure miss: dbi/dbi.h
-Configure miss: DPDK
-Configure miss: rte_config.h usability
-Configure miss: rte_config.h presence
-Configure miss: rte_config.h
-Configure miss: libesmtp.h usability
-Configure miss: libesmtp.h presence
-Configure miss: libesmtp.h
-Configure miss: gm_protocol.h usability
-Configure miss: gm_protocol.h presence
-Configure miss: gm_protocol.h
-Configure miss: gps.h usability
-Configure miss: gps.h presence
-Configure miss: gps.h
-Configure miss: GRPCPP
-Configure miss: grpc_cpp_plugin
-Configure miss: javac
-Configure miss: jar
-Configure miss: libmemcached/memcached.h usability
-Configure miss: libmemcached/memcached.h presence
-Configure miss: libmemcached/memcached.h
-Configure miss: LIBMONGOC
-Configure miss: mosquitto.h usability
-Configure miss: mosquitto.h presence
-Configure miss: mosquitto.h
-Configure miss: libmnl.h
-Configure miss: netapp_api.h usability
-Configure miss: netapp_api.h presence
-Configure miss: netapp_api.h
-Configure miss: net-snmp/net-snmp-config.h usability
-Configure miss: net-snmp/net-snmp-config.h presence
-Configure miss: net-snmp/net-snmp-config.h
-Configure miss: net-snmp/net-snmp-includes.h
-Configure miss: net-snmp/agent/net-snmp-agent-includes.h
-Configure miss: oping.h usability
-Configure miss: oping.h presence
-Configure miss: oping.h
-Configure miss: owcapi.h usability
-Configure miss: owcapi.h presence
-Configure miss: owcapi.h
-Configure miss: broken Perl_load_module()
-Configure miss: pmw_api.h usability
-Configure miss: pmw_api.h presence
-Configure miss: pmw_api.h
-Configure miss: libpq-fe.h usability
-Configure miss: libpq-fe.h presence
-Configure miss: libpq-fe.h
-Configure miss: pqos.h usability
-Configure miss: pqos.h presence
-Configure miss: pqos.h
-Configure miss: jevents.h usability
-Configure miss: jevents.h presence
-Configure miss: jevents.h
-Configure miss: proton/proactor.h usability
-Configure miss: proton/proactor.h presence
-Configure miss: proton/proactor.h
-Configure miss: amqp.h usability
-Configure miss: amqp.h presence
-Configure miss: amqp.h
-Configure miss: routeros_api.h usability
-Configure miss: routeros_api.h presence
-Configure miss: routeros_api.h
-Configure miss: sensors/sensors.h usability
-Configure miss: sensors/sensors.h presence
-Configure miss: sensors/sensors.h
-Configure miss: LIBSIGROK
-Configure miss: pkg-config for libstatgrab
-Configure miss: tcrdb.h usability
-Configure miss: tcrdb.h presence
+Configure miss: struct net_device_stats.rx_bytes
+Configure miss: struct net_device_stats.rx_errors
+Configure miss: struct net_device_stats.tx_packets
+Configure miss: swapctl
+Configure miss: sys/dkstat.h
+Configure miss: sys/dkstat.h presence
+Configure miss: sys/dkstat.h usability
+Configure miss: sys/fs_types.h
+Configure miss: sys/fstyp.h
+Configure miss: sys/isa_defs.h
+Configure miss: sys/mntent.h
+Configure miss: sys/mnttab.h
+Configure miss: sys/sysctl.h
+Configure miss: sys/vfstab.h
+Configure miss: sys/vmmeter.h
+Configure miss: sysctl
+Configure miss: sysctl kern.cp_time
+Configure miss: sysctl kern.cp_times
+Configure miss: sysctlbyname
 Configure miss: tcrdb.h
-Configure miss: xenctrl.h usability
-Configure miss: xenctrl.h presence
+Configure miss: tcrdb.h presence
+Configure miss: tcrdb.h usability
+Configure miss: thread_info
+Configure miss: vm/anon.h
+Configure miss: whether getmntent takes two arguments
+Configure miss: whether htonll is defined
+Configure miss: whether i2c_smbus_read_i2c_block_data is declared
+Configure miss: whether strerror_r returns char *
 Configure miss: xenctrl.h
-Configure miss: MicAccessApi.h usability
-Configure miss: MicAccessApi.h presence
-Configure miss: MicAccessApi.h
-Configure miss: libOpenIPMIpthread
-Configure miss: atasmart.h usability
-Configure miss: atasmart.h presence
-Configure miss: atasmart.h
-Configure miss: LIBRIEMANN_CLIENT
+Configure miss: xenctrl.h presence
+Configure miss: xenctrl.h usability
+Configure miss: xfs/xqm.h
