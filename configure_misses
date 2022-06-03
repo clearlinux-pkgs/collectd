@@ -100,7 +100,6 @@ Configure miss: proton/proactor.h presence
 Configure miss: proton/proactor.h usability
 Configure miss: pthread_np.h
 Configure miss: pthread_set_name_np
-Configure miss: pthread_setname_np
 Configure miss: redfish.h
 Configure miss: redfish.h presence
 Configure miss: redfish.h usability

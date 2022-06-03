@@ -1,1 +1,1 @@
---with-perl-bindings="PREFIX=/usr INSTALLDIRS=vendor"
+--with-perl-bindings="PREFIX=/usr INSTALLDIRS=vendor NO_PACKLIST=true NO_PERLLOCAL=true"

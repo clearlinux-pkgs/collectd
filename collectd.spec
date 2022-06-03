@@ -4,7 +4,7 @@
 #
 Name     : collectd
 Version  : 5.12.0
-Release  : 19
+Release  : 20
 URL      : https://storage.googleapis.com/collectd-tarballs/collectd-5.12.0.tar.bz2
 Source0  : https://storage.googleapis.com/collectd-tarballs/collectd-5.12.0.tar.bz2
 Summary  : barometer plugin for collectd
@@ -122,16 +122,16 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1621900450
+export SOURCE_DATE_EPOCH=1654294676
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
-%configure --disable-static --with-perl-bindings="PREFIX=/usr INSTALLDIRS=vendor"
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
+%configure --disable-static --with-perl-bindings="PREFIX=/usr INSTALLDIRS=vendor NO_PACKLIST=true NO_PERLLOCAL=true"
 make  %{?_smp_mflags}
 
 %check
@@ -142,7 +142,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1621900450
+export SOURCE_DATE_EPOCH=1654294676
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/collectd
 cp %{_builddir}/collectd-5.12.0/COPYING %{buildroot}/usr/share/package-licenses/collectd/93a4490e1756e10ae6f7a60183f1e1e895c22bcd
@@ -326,7 +326,4 @@ cp %{_builddir}/collectd-5.12.0/COPYING %{buildroot}/usr/share/package-licenses/
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/Collectd.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Collectd/Plugins/OpenVZ.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Collectd/Unixsock.pm
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/auto/Collectd/.packlist
+/usr/lib/perl5/*
