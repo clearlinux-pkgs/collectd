@@ -1,0 +1,11 @@
+--- collectd-5.12.0/src/cpython.h~	2020-07-20 09:50:14.000000000 +0000
++++ collectd-5.12.0/src/cpython.h	2022-10-25 23:04:26.487717827 +0000
+@@ -26,7 +26,7 @@
+ 
+ /* Some python versions don't include this by default. */
+ 
+-#include <longintrepr.h>
++#include <Python.h>
+ 
+ /* These two macros are basically Py_BEGIN_ALLOW_THREADS and
+  * Py_BEGIN_ALLOW_THREADS

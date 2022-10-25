@@ -4,7 +4,7 @@
 #
 Name     : collectd
 Version  : 5.12.0
-Release  : 22
+Release  : 23
 URL      : https://storage.googleapis.com/collectd-tarballs/collectd-5.12.0.tar.bz2
 Source0  : https://storage.googleapis.com/collectd-tarballs/collectd-5.12.0.tar.bz2
 Summary  : barometer plugin for collectd
@@ -39,6 +39,7 @@ BuildRequires : python3-dev
 BuildRequires : systemd-dev
 BuildRequires : valgrind
 BuildRequires : yajl-dev
+Patch1: python311.patch
 
 %description
 collectd is a small daemon written in C for performance.  It reads various
@@ -116,13 +117,14 @@ perl components for the collectd package.
 %prep
 %setup -q -n collectd-5.12.0
 cd %{_builddir}/collectd-5.12.0
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1654294676
+export SOURCE_DATE_EPOCH=1666739186
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -142,10 +144,10 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1654294676
+export SOURCE_DATE_EPOCH=1666739186
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/collectd
-cp %{_builddir}/collectd-5.12.0/COPYING %{buildroot}/usr/share/package-licenses/collectd/93a4490e1756e10ae6f7a60183f1e1e895c22bcd
+cp %{_builddir}/collectd-%{version}/COPYING %{buildroot}/usr/share/package-licenses/collectd/93a4490e1756e10ae6f7a60183f1e1e895c22bcd || :
 %make_install
 
 %files
