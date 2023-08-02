@@ -12,6 +12,7 @@ librdkafka-dev
 openldap-dev
 openssl-dev
 perl(YAML::Any)
+pkgconfig(libstatgrab)
 python3-dev
 systemd-dev
 valgrind

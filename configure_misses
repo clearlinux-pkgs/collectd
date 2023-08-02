@@ -87,7 +87,6 @@ Configure miss: oping.h usability
 Configure miss: owcapi.h
 Configure miss: owcapi.h presence
 Configure miss: owcapi.h usability
-Configure miss: pkg-config for libstatgrab
 Configure miss: pmw_api.h
 Configure miss: pmw_api.h presence
 Configure miss: pmw_api.h usability
