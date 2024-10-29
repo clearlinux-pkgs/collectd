@@ -7,7 +7,7 @@
 #
 Name     : collectd
 Version  : 5.12.0
-Release  : 31
+Release  : 32
 URL      : https://storage.googleapis.com/collectd-tarballs/collectd-5.12.0.tar.bz2
 Source0  : https://storage.googleapis.com/collectd-tarballs/collectd-5.12.0.tar.bz2
 Summary  : barometer plugin for collectd
