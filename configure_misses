@@ -23,6 +23,9 @@ Configure miss: getvfsstat
 Configure miss: gm_protocol.h
 Configure miss: gm_protocol.h presence
 Configure miss: gm_protocol.h usability
+Configure miss: google/protobuf/util/time_util.h
+Configure miss: google/protobuf/util/time_util.h presence
+Configure miss: google/protobuf/util/time_util.h usability
 Configure miss: gps.h
 Configure miss: gps.h presence
 Configure miss: gps.h usability
@@ -94,6 +97,7 @@ Configure miss: pqos.h
 Configure miss: pqos.h presence
 Configure miss: pqos.h usability
 Configure miss: processor_info
+Configure miss: protoc 3.0.0+
 Configure miss: proton/proactor.h
 Configure miss: proton/proactor.h presence
 Configure miss: proton/proactor.h usability

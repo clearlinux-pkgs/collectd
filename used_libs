@@ -16,9 +16,8 @@ libnotify.so.4
 libpcap.so.1
 libperl.so
 libprotobuf-c.so.1
-libpython3.12.so.1.0
+libpython3.13.so.1.0
 librdkafka.so.1
 librrd.so.8
-libstatgrab.so.10
 libudev.so.1
 libyajl.so.2
