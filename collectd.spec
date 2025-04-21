@@ -7,7 +7,7 @@
 #
 Name     : collectd
 Version  : 5.12.0
-Release  : 34
+Release  : 35
 URL      : https://storage.googleapis.com/collectd-tarballs/collectd-5.12.0.tar.bz2
 Source0  : https://storage.googleapis.com/collectd-tarballs/collectd-5.12.0.tar.bz2
 Summary  : Statistics collection daemon for filling RRD files.
